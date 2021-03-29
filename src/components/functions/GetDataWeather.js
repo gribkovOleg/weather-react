@@ -5,4 +5,7 @@ export const GetDataWeather = (valueLocality, valueCoutry, changeData) => {
         .then((json) => {
             json.success === false ? alert('invalid data entered!') : changeData(json)
         })
+        .catch(err => {
+    console.log('Failed fetch ', err);
+  });
 }
